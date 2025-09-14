@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'appLogin/css/index_style.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="form-container">
+            <h2>Registro</h2>
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <form class="form" method="post">
+                {% csrf_token %}
+                <div class="field">
+                    <div class="field2">
+                        {{ form.username.label_tag }}
+                        {{ form.username }}
+                    </div>                    
+                    {% if form.username.errors %}
+                        <div class="error">{{ form.username.errors }}</div>
+                    {% endif %}
+                </div>
+                {% comment %}
+                <div class="field">
+                    <div class="field2">
+                        {{ form.email.label_tag }}
+                        {{ form.email }}
+                    </div>
+                    {% if form.email.errors %}
+                        <div class="error">{{ form.email.errors }}</div>
+                    {% endif %}
+                </div>
+                {% endcomment %}
+                <div class="field">
+                    <div class="field2">
+                        {{ form.password1.label_tag }}
+                        {{ form.password1 }}
+                    </div>
+                    {% if form.password1.errors %}
+                        <div class="error">{{ form.password1.errors }}</div>
+                    {% endif %}
+                </div>
+                <div class="field">
+                    <div class="field2">
+                        {{ form.password2.label_tag }}
+                        {{ form.password2 }}
+                    </div>
+                    {% if form.password2.errors %}
+                        <div class="error">{{ form.password2.errors }}</div>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+            <div class="register-group">
+                <span class="txt1">
+                    ¿Ya tienes una cuenta?
+                </span>
+                <a class="txt2" href="{% url 'login' %}">
+                    Iniciar Sesión
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

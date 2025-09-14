@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'appLogin/css/index_style.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="form-container">
+            <h2>Iniciar Sesión</h2>
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <form class="form" method="post">
+                {% csrf_token %}
+                <div class="field">
+                    <div class="field2">
+                        {{ form.username.label_tag }}
+                        {{ form.username }}
+                    </div>                    
+                    {% if form.username.errors %}
+                        <div class="error">{{ form.username.errors }}</div>
+                    {% endif %}
+                </div>
+                <div class="field">
+                    <div class="field2">
+                        {{ form.password.label_tag }}
+                        {{ form.password }}
+                    </div>
+                    {% if form.password.errors %}
+                        <div class="error">{{ form.password.errors }}</div>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn">Iniciar Sesión</button>
+            </form>
+            <div class="register-group">
+                <span class="txt1">
+                    ¿No tienes una cuenta?
+                </span>
+                <a class="txt2" href="{% url 'register' %}">
+                    Regístrate
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

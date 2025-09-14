@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.container, .login-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.button-container { 
+    display: flex; 
+    justify-content: space-between; 
+    gap: 1rem; 
+    margin-top: 1.5rem;
+}
+
+/* Estilos del título */
+h1, h2 {
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+/* Estilo de párrafo */
+p {
+    margin-bottom: 1rem;
+    color: #666666;
+}
+
+/* Contenedor de cada campo */
+.field {
+    width: 80%; /* Ajusta el tamaño del contenedor */
+    margin-bottom: 0.5rem !important;
+    text-align: left;
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Estilo para etiquetas */
+label {
+    display: block;
+    margin-bottom: 0.25rem !important; /* Reduce el espacio debajo de la etiqueta */
+    color: #333333;
+}
+
+/* Estilo para campos de entrada */
+input {
+    width: 100%; /* Asegura que el campo ocupe el 100% del contenedor padre */
+    padding: 0.5rem; /* Reduce el relleno interno del campo de texto */
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem !important; /* Reduce el espacio debajo del campo de texto */
+}
+
+/* Botones */
+.button-group, .register-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    gap: 1rem; /* Añade espacio entre los botones */
+}
+
+.btn {
+    width: 45%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #a64bf4;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #9933cc;
+}
+
+/* Estilos específicos para secciones de registro y error */
+.register-group .txt1 {
+    color: #333333;
+    margin-right: 0.5rem;
+}
+
+.register-group .txt2 {
+    color: #a64bf4;
+    text-decoration: none;
+}
+
+.register-group .txt2:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    margin-bottom: 1rem;
+}
+
+

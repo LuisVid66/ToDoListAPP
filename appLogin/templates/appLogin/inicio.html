@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'appLogin/css/index_style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>ToDoListAPP</h1>
+        <p>Proyecto por Luis Angelo Vidal Cabrera</p>
+        <div class="button-container">
+            <a href="{% url 'login' %}" class="btn">Iniciar Sesión</a>
+            <a href="{% url 'register' %}" class="btn">Regístrate</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
